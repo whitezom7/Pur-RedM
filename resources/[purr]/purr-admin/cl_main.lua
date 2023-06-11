@@ -1,18 +1,17 @@
-Player = GetPlayerIndex()
-Invincible = false
+local Player = GetPlayerIndex()
+local godmode = false
 
 
 function GodMode ()
-    if Invincible == false then
-        Invincible = true
-        SetPlayerInvincible(Player,Invincible)
+    if godmode == false then
+        godmode = true
+        SetPlayerInvincible(Player,godmode)
         lib.notify({title = 'God Mode',
             description = 'God Mode is On',
             type = 'success'})
-        print(Invincible)
     else
-        Invincible = false
-        SetPlayerInvincible(Player,Invincible)
+        godmode = false
+        SetPlayerInvincible(Player,godmode)
         lib.notify({title = 'God Mode',
             description = 'God Mode is Off',
             type = 'success'})
